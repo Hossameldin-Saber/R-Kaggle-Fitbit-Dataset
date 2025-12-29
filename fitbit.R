@@ -6,11 +6,11 @@ library(dplyr)
 library(ggplot2)
 library(tidyr)
 #Import Data
-activity <- read.csv("D:/DA/PROJECTS/kaggle-fitbit/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv")
-calories <- read.csv("D:/DA/PROJECTS/kaggle-fitbit/Fitabase Data 4.12.16-5.12.16/hourlyCalories_merged.csv")
-intensities <- read.csv("D:/DA/PROJECTS/kaggle-fitbit/Fitabase Data 4.12.16-5.12.16/hourlyIntensities_merged.csv")
-sleep <- read.csv("D:/DA/PROJECTS/kaggle-fitbit/Fitabase Data 4.12.16-5.12.16/sleepDay_merged.csv")
-weight <- read.csv("D:/DA/PROJECTS/kaggle-fitbit/Fitabase Data 4.12.16-5.12.16/weightLogInfo_merged.csv")
+activity <- read.csv("dailyActivity_merged.csv")
+calories <- read.csv("hourlyCalories_merged.csv")
+intensities <- read.csv("hourlyIntensities_merged.csv")
+sleep <- read.csv("sleepDay_merged.csv")
+weight <- read.csv("weightLogInfo_merged.csv")
 
 #Check Data
 glimpse(activity)
@@ -109,3 +109,4 @@ ggplot(aes(x=TotalMinutesAsleep,y=SedentaryMinutes)) +
   geom_point(color='darkblue') + geom_smooth() + theme_minimal()+
   labs(title="Minutes Asleep vs. Sedentary Minutes")
 #-ve correlation; the less sedentary life the better sleep.
+
